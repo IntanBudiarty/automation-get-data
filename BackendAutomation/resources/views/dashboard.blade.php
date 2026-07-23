@@ -46,39 +46,39 @@
     <!-- Main Body Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
         
-        <!-- Quick Stats Row -->
+        <!-- Quick Stats Row (With Glow Borders & Subtle Icon BG) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+            <div class="bg-slate-900/80 border-t-2 border-t-blue-500 border-x border-b border-slate-800 p-5 rounded-2xl relative overflow-hidden shadow-lg">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-medium text-gray-400 uppercase tracking-wider">Total Sesi Otomatisasi</p>
-                        <h3 id="stat-total-runs" class="text-3xl font-bold font-outfit text-white mt-1">0</h3>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Total Sesi Otomatisasi</p>
+                        <h3 id="stat-total-runs" class="text-3xl font-bold font-outfit text-blue-400 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl shadow-inner">
                         <i class="fa-solid fa-rotate"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+            <div class="bg-slate-900/80 border-t-2 border-t-emerald-500 border-x border-b border-slate-800 p-5 rounded-2xl relative overflow-hidden shadow-lg">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-medium text-gray-400 uppercase tracking-wider">Total Video Discrape</p>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Total Video Discrape</p>
                         <h3 id="stat-total-videos" class="text-3xl font-bold font-outfit text-emerald-400 mt-1">0</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl shadow-inner">
                         <i class="fa-solid fa-video"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+            <div class="bg-slate-900/80 border-t-2 border-t-rose-500 border-x border-b border-slate-800 p-5 rounded-2xl relative overflow-hidden shadow-lg">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-medium text-gray-400 uppercase tracking-wider">Status Terakhir</p>
+                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Status Terakhir</p>
                         <h3 id="stat-last-status" class="text-xl font-bold font-outfit text-gray-300 mt-1">Belum ada</h3>
                     </div>
-                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-xl shadow-inner">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
         <!-- Tabs Navigation -->
         <div class="flex border-b border-slate-800 mb-8 gap-8">
             <button onclick="switchTab('automation')" id="tab-btn-automation"
-                class="pb-4 text-sm font-semibold border-b-2 border-brand-500 text-white flex items-center gap-2 transition">
+                class="pb-4 text-sm font-semibold border-b-2 border-red-500 text-white flex items-center gap-2 transition">
                 <i class="fa-solid fa-sliders"></i>
                 <span>Pengaturan Otomatisasi</span>
             </button>
@@ -112,22 +112,22 @@
                             <h2 class="font-outfit text-2xl font-bold text-white">Mulai Otomatisasi</h2>
                             <p class="text-sm text-gray-400">Atur durasi scroll otomatis YouTube Shorts & pengambilan data video</p>
                         </div>
-                        <span class="p-3 bg-brand-500/10 border border-brand-500/20 rounded-2xl text-brand-500 text-xl">
+                        <span class="p-3 bg-red-500/10 border border-red-500/20 rounded-2xl text-red-500 text-xl">
                             <i class="fa-solid fa-play"></i>
                         </span>
                     </div>
 
                     <form onsubmit="handleStartAutomation(event)" class="space-y-6">
                         
-                        <!-- Duration Input -->
+                        <!-- Duration Input (Balanced Padding) -->
                         <div>
                             <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
                                 Durasi Otomatisasi (Detik)
                             </label>
                             <div class="relative">
                                 <input type="number" id="automation-duration" min="5" max="600" value="30" required
-                                    class="w-full bg-slate-900/90 border border-slate-700 rounded-2xl px-5 py-4 text-lg font-bold text-white focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition">
-                                <span class="absolute right-5 top-1/2 -translate-y-1/2 text-sm text-gray-400 font-medium">Detik</span>
+                                    class="w-full bg-slate-900/50 border border-slate-700/60 focus:border-red-500 focus:ring-1 focus:ring-red-500 text-white rounded-xl px-4 py-2.5 text-base font-bold outline-none transition">
+                                <span class="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-semibold uppercase">Detik</span>
                             </div>
                         </div>
 
@@ -135,16 +135,16 @@
                         <div>
                             <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Pilihan Cepat Durasi</label>
                             <div class="grid grid-cols-4 gap-3">
-                                <button type="button" onclick="setDurationPreset(30)" class="preset-btn bg-slate-800 hover:bg-brand-600 text-gray-200 py-2.5 px-3 rounded-xl text-xs font-semibold transition border border-slate-700">30 Detik</button>
-                                <button type="button" onclick="setDurationPreset(60)" class="preset-btn bg-slate-800 hover:bg-brand-600 text-gray-200 py-2.5 px-3 rounded-xl text-xs font-semibold transition border border-slate-700">1 Menit</button>
-                                <button type="button" onclick="setDurationPreset(120)" class="preset-btn bg-slate-800 hover:bg-brand-600 text-gray-200 py-2.5 px-3 rounded-xl text-xs font-semibold transition border border-slate-700">2 Menit</button>
-                                <button type="button" onclick="setDurationPreset(300)" class="preset-btn bg-slate-800 hover:bg-brand-600 text-gray-200 py-2.5 px-3 rounded-xl text-xs font-semibold transition border border-slate-700">5 Menit</button>
+                                <button type="button" onclick="setDurationPreset(30)" class="preset-btn bg-slate-800/80 hover:bg-red-600 text-gray-200 py-2 px-3 rounded-xl text-xs font-semibold transition border border-slate-700/60">30 Detik</button>
+                                <button type="button" onclick="setDurationPreset(60)" class="preset-btn bg-slate-800/80 hover:bg-red-600 text-gray-200 py-2 px-3 rounded-xl text-xs font-semibold transition border border-slate-700/60">1 Menit</button>
+                                <button type="button" onclick="setDurationPreset(120)" class="preset-btn bg-slate-800/80 hover:bg-red-600 text-gray-200 py-2 px-3 rounded-xl text-xs font-semibold transition border border-slate-700/60">2 Menit</button>
+                                <button type="button" onclick="setDurationPreset(300)" class="preset-btn bg-slate-800/80 hover:bg-red-600 text-gray-200 py-2 px-3 rounded-xl text-xs font-semibold transition border border-slate-700/60">5 Menit</button>
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
+                        <!-- Submit Button (Crimson YouTube Gradient) -->
                         <button type="submit" id="btn-start-automation"
-                            class="w-full gradient-bg hover:opacity-90 text-white font-bold py-4 px-6 rounded-2xl shadow-xl shadow-purple-500/20 transition duration-200 flex items-center justify-center gap-3 text-base">
+                            class="w-full bg-gradient-to-r from-red-600 to-rose-500 hover:from-red-500 hover:to-rose-400 text-white font-semibold py-3.5 px-6 rounded-xl shadow-lg shadow-red-900/30 transition-all flex items-center justify-center gap-3 text-base">
                             <i class="fa-solid fa-rocket"></i>
                             <span>Jalankan Otomatisasi Sekarang</span>
                         </button>
