@@ -90,11 +90,7 @@ cd BackendAutomation
    ```bash
    php artisan migrate
    ```
-
-5. **Install Dependensi Frontend (Vite & Bootstrap)**:
-   ```bash
-   npm install
-   ```
+*(Catatan: Frontend menggunakan Blade Template dengan CDN langsung, sehingga tidak memerlukan langkah `npm install` atau bundler Node.js).*
 
 ---
 
@@ -127,20 +123,13 @@ cd ../Automation
 
 ### 4. Menjalankan Server Lokal
 
-Untuk menjalankan seluruh sistem, buka **2 jendela terminal**:
+Untuk menjalankan seluruh sistem, jalankan server Laravel:
 
-#### Terminal 1: Laravel Backend Server
 ```bash
 cd BackendAutomation
 php artisan serve
 ```
 *Server Laravel akan berjalan di `http://127.0.0.1:8000`.*
-
-#### Terminal 2: Vite Dev Assets (Opsional untuk Asset Hot Reloading)
-```bash
-cd BackendAutomation
-npm run dev
-```
 
 ---
 
