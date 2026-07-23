@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: automation_mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: backendautomation
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./BackendAutomation
+      dockerfile: Dockerfile
+    container_name: automation_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: backendautomation
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+    depends_on:
+      - db
+
+  python-automation:
+    build:
+      context: ./Automation
+      dockerfile: Dockerfile
+    container_name: automation_python
+    restart: "no"
+    environment:
+      API_URL: http://backend:8000/api
+    depends_on:
+      - backend
+
+volumes:
+  dbdata:
